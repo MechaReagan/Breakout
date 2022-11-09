@@ -81,7 +81,7 @@ while game_is_on:
     if ball.ycor() > 380:
         ball.bounce_y()
 
-    if ball.distance(paddle) < 45 and ball.ycor() > -340:
+    if ball.distance(paddle) < 45 and (ball.ycor() > -340 and ball.y_move < 0):
         ball.bounce_y()
 
     for bricks in brick_list:
